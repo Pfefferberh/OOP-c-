@@ -18,26 +18,57 @@
 //*Удосконалити клас Риба.У &quot; океані&quot; &quot; ростуть&quot; водорості.Риби збільшують своє
 //здоров’я, якщо при переміщенні натрапляють на водорість.
 
+#include <windows.h>
 #include "Fish.h"
 
-int Fish::ocean[10][10] = {
-  {0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
-  {0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
-  {0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
-  {0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
-  {0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
-  {0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
-  {0, 0, 0, 0, 0, 0, 0, 0, 0, 0}
-};
-int main() {
+string ** Fish::ocean;
+int Fish::plancton_x[3];
+int Fish::plancton_y[3];
+int Fish::size_x;
+int Fish::size_y;
+string Fish::fish_sumbol = "<x";
+int Fish::fish_count = 0;
 
-	Fish e;
-	e.Move_fish();
-	e.Show_ocean();
-	Fish t;
-	t.Move_fish();
-	t.Show_ocean();
-		
+int main() {
+	srand(unsigned(time(NULL)));
+	int choise = 1;
+	int size_x = 0;
+	int size_y = 0;
+	cout << "Enter the size vertucal for ocean window : ";
+	cin >> size_x;
+	cout << "Enter the size horuzontal for ocean window : ";
+	cin >> size_y;
+	Fish::Set_size(size_x, size_y);
+	Fish::Create_ocean();
+
+	Fish first;
+	Fish two;
+	Fish tree;
+
+	Fish::Random_plancton();
+	Fish::Life_ocean();
+
+	first.Find_plancton(first.Get_x(), first.Get_y());
+	cout << "-------------------" << endl;
+	two.Find_plancton(two.Get_x(), two.Get_y());
+	tree.Find_plancton(two.Get_x(), two.Get_y());
+
+	for (; choise < 150; choise++) {
+		system("cls");
+		cout << "Health " << first.Get_number_fish() << " fish : " << first.Get_health() << endl;
+		cout << "Health " << two.Get_number_fish() << " fish : " << two.Get_health() << endl;
+		cout << "Health " << tree.Get_number_fish() << " fish : " << tree.Get_health() << endl;
+
+		Fish::Life_ocean();
+		first.Move_fish();
+		two.Move_fish();
+		tree.Move_fish();
+
+		Fish::Show_ocean();
+		Sleep(300);
+	}
+
+	Fish::Delete_ocean();
 
 	system("pause");
 	return 0;

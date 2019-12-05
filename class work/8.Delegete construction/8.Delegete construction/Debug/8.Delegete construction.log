@@ -1,2 +1,3 @@
-﻿  Source.cpp
+﻿  Fish.cpp
+d:\my program\class work\8.delegete construction\8.delegete construction\fish.cpp(208): warning C4715: 'Fish::Get_health': not all control paths return a value
   8.Delegete construction.vcxproj -> D:\my program\class work\8.Delegete construction\Debug\8.Fish.exe
