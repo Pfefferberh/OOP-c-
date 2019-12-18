@@ -20,8 +20,8 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
-    <ProjectGuid>{4058B8B5-13D5-4068-88A5-FD9A738160D8}</ProjectGuid>
-    <RootNamespace>My12Friendfunck</RootNamespace>
+    <ProjectGuid>{A1EADBED-59F4-4D72-9CD7-42597AA06D48}</ProjectGuid>
+    <RootNamespace>My16repitlist</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -115,17 +115,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Audio.cpp" />
-    <ClCompile Include="Book.cpp" />
-    <ClCompile Include="Jurnal.cpp" />
     <ClCompile Include="Source.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="Audio.h" />
-    <ClInclude Include="Bible_include.h" />
-    <ClInclude Include="Book.h" />
-    <ClInclude Include="Jurnal.h" />
-    <ClInclude Include="Rainbow_shop.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

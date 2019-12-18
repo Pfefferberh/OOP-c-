@@ -1,19 +1,16 @@
 #pragma once
 #include "Bible_include.h"
-
-class Book
+class Audio
 {
 	string name;
-	string autor;
-	string publishet;
+	string star;
+	int treks;
 	
-
 public:
 	int price;
-	Book();
-	void Create();
+	Audio();
 	void Info();
 
-	~Book();
+	~Audio();
 };
 

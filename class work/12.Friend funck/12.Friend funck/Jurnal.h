@@ -1,19 +1,14 @@
 #pragma once
 #include "Bible_include.h"
-
-class Book
+class Jurnal
 {
 	string name;
-	string autor;
-	string publishet;
 	
-
 public:
 	int price;
-	Book();
-	void Create();
+	Jurnal();
 	void Info();
 
-	~Book();
+	~Jurnal();
 };
 

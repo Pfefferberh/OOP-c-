@@ -1,0 +1,10 @@
+﻿  Audio.cpp
+  Book.cpp
+  Jurnal.cpp
+  Source.cpp
+d:\my program\class work\12.friend funck\12.friend funck\rainbow_shop.h(50): error C2106: '=': left operand must be l-value
+  d:\my program\class work\12.friend funck\12.friend funck\rainbow_shop.h(44): note: while compiling class template member function 'void CShop<Book>::Sort_tovar(void)'
+  d:\my program\class work\12.friend funck\12.friend funck\source.cpp(54): note: see reference to function template instantiation 'void CShop<Book>::Sort_tovar(void)' being compiled
+  d:\my program\class work\12.friend funck\12.friend funck\source.cpp(47): note: see reference to class template instantiation 'CShop<Book>' being compiled
+d:\my program\class work\12.friend funck\12.friend funck\rainbow_shop.h(51): error C2106: '=': left operand must be l-value
+  Generating Code...
